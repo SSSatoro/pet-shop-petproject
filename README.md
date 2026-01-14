@@ -1,23 +1,23 @@
 # Pet Shop (Pet-Project)
 
-Учебный проект backend-системы для управления пользователями и корпоративными процессами.
-Разрабатывается для самостоятельного изучения **Spring Framework** и современных подходов к веб-разработке
+Studying a project for a backend system for managing users and corporate processes.
+Developed for self-study of the Spring Framework and modern web development approaches.
 
-### 🛠 Технологии (Tech Stack)
+### 🛠 Tech Stack
 * **Language:** Java 17
 * **Framework:** Spring Boot 3
 * **Security:** Spring Security (Authentication/Authorization)
 * **Database:** MySQL, Hibernate (Spring Data JPA)
 * **Build Tool:** Maven
 
-### ✅ Функционал
-* [x] Регистрация пользователей
-* [x] Аутентификация (Login form)
-* [x] Подключение к базе данных MySQL
-* [x] Базовая архитектура REST API
-* [x] Взаимосвязь с сервисом Google путем аутентификации через существующую почту
+### ✅ Features
+* [x] User Registration
+* [x] Authentication (Login form)
+* [x] Connecting to a MySQL Database
+* [x] Basic REST API Architecture
+* [x] Interaction with Google via authentication via existing email
 
-### 🚀 Планы по развитию
-* [ ] Покрытие кода Unit-тестами
-* [ ] Дорабокта интерфейса
-* [ ] Оптимизация кода
+### 🚀  Development Plans
+* [ ] Unit Test Coverage
+* [ ] Interface Improvements
+* [ ] Code Optimization
