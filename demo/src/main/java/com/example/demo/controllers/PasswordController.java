@@ -65,16 +65,15 @@ public class PasswordController {
 
         PasswordResetToken resetToken = tokenRepository.findByToken(token);
 
-        // Тут тоже стоит проверить валидность токена
         if (resetToken == null || resetToken.isExpired()) return "redirect:/login?error";
 
         User user = resetToken.getUser();
         user.setPassword(passwordEncoder.encode(newPassword));
         userRepository.save(user);
 
-        // Удаляем использованный токен
         tokenRepository.delete(resetToken);
 
         return "redirect:/login?message=PasswordChanged";
     }
 }
+
