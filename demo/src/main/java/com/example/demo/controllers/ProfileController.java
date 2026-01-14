@@ -26,7 +26,6 @@ public class ProfileController {
 
 
         User user = userRepository.findByUsername(currentPrincipalName)
-                // Если вдруг не нашли по username, можно попробовать поискать по email (опционально)
                 .or(() -> userRepository.findByEmail(currentPrincipalName))
                 .orElseThrow(() -> new RuntimeException("Пользователь не найден в базе"));
 
@@ -36,3 +35,4 @@ public class ProfileController {
         return "profile";
     }
 }
+
