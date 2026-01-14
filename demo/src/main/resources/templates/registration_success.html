@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Успешно!</title>
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            font-family: Arial, sans-serif;
+        }
+        .success-message {
+            margin-top: 20px;
+            font-size: 1.5em;
+            color: #28a745;
+        }
+
+        #success-animation {
+            width: 150px;
+        }
+    </style>
+</head>
+<body>
+
+<img id="success-animation" src="https://media2.giphy.com/media/v1.Y2lkPTc5MGI3NjExcnlwMWduNTRhcG13azlrZmdkcnN4eXdidGF5Y2Uyd3UxeTZ1ZDZvOCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/l0MYJWc7F4lcwhEpq/giphy.gif" alt="Успешная регистрация">
+
+<div class="success-message">
+    <h2>🎉 Готово!</h2>
+    <p>Ваша учетная запись успешно создана. Перенаправление...</p>
+</div>
+
+<script>
+    const REDIRECT_DELAY_MS = 5000; // 5 секунды
+
+    setTimeout(function() {
+        window.location.href = '/login?registered=true';
+    }, REDIRECT_DELAY_MS);
+</script>
+
+</body>
+</html>

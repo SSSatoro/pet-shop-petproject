@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Регистрация</title>
+</head>
+<body>
+<div class="registration-container">
+    <h2>Регистрация</h2>
+
+    <form method="POST" action="/api/auth/register">
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+
+        <label for="username">Username:</label>
+        <input type="text" id="username" name="username" required>
+
+        <label for="password">Пароль:</label>
+        <input type="password" id="password" name="password" required>
+
+        <label for="firstName">Имя:</label>
+        <input type="text" id="firstName" name="firstName">
+
+        <label for="lastName">Фамилия:</label>
+        <input type="text" id="lastName" name="lastName">
+
+
+        <button type="submit">Зарегистрироваться</button>
+    </form>
+
+    <p>Уже есть аккаунт? <a href="/login.html">Войти</a></p>
+</div>
+</body>
+</html>

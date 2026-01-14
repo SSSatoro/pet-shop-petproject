@@ -1,0 +1,20 @@
+version: '3.8' # Or a compatible version like '3.1'
+
+services:
+  db:
+    image: mysql:8.1 # Specifies the MySQL 8.0 image
+    container_name: pets_shop_db # Optional: Assigns a custom name to the container
+    ports:
+      - "3309:3306" # Maps host port 3309 to container port 3306
+    environment:
+      MYSQL_ROOT_PASSWORD: password # Set a strong root password
+      MYSQL_DATABASE: pets_shop_db # Optional: Create an initial database
+      MYSQL_USER: creator # Optional: Create a new user
+      MYSQL_PASSWORD: mypassword # Optional: Set password for the new user
+    volumes:
+      - db_data:/var/lib/mysql # Persists data to a named volume
+      # - ./init.sql:/docker-entrypoint-initdb.d/init.sql # Optional: To run an initialization script
+    restart: always # Ensures the container restarts if it stops
+
+volumes:
+  db_data: # Defines the named volume for data persistence

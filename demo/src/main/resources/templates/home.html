@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="ru" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Успешный вход</title>
+    <style>
+        body {
+            position: relative;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            flex-direction: column;
+        }
+        body::before {
+            content: "";
+
+            background-image: url('https://wow.zamimg.com/uploads/screenshots/normal/1018410-stormwind-city.jpg');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            opacity: 0.85;
+            filter: blur(4px);
+        }
+        h1 { margin-bottom: 10px; }
+        .card {
+            background: rgba(0, 0, 0, 0.6);
+            padding: 40px;
+            border-radius: 15px;
+            text-align: center;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.8);
+            z-index: 1;
+        }
+        img { border-radius: 10px; margin: 20px 0; max-width: 300px; }
+        .btn {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #61dafb;
+            color: #282c34;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+        .btn:hover { background-color: #21a1f1; transform: scale(1.05); }
+    </style>
+</head>
+<body>
+<div class="card">
+    <h1>Добро пожаловать, <span th:text="${username}">!</span></h1>
+    <p>Session-авторизация настроена!</p>
+
+    <img src="https://media2.giphy.com/media/v1.Y2lkPTc5MGI3NjExc2UwZWEzZ2cwanQxdmNjNW55ZGJnanRvN2djYmwxc3UzYzNzbHlvdCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/14e27FhfQA3Yivhi6e/giphy.gif" alt="Hacker Cat">
+
+    <br><br>
+    <a th:href="@{/profile}" class="btn" style="margin-right: 20px;">Перейти в Профиль</a>
+    <a th:href="@{/logout}" class="btn">Выйти из системы</a>
+    <a th:href="@{/shop}" class="btn">Магазин</a>
+</div>
+</body>
+</html>

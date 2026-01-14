@@ -1,0 +1,19 @@
+CREATE TABLE products (
+    id BIGINT AUTO_INCREMENT PRIMARY KEY,
+
+    title VARCHAR(255) NOT NULL,
+    description TEXT,
+
+    price DECIMAL(19, 2) NOT NULL,
+
+    stock_quantity INT DEFAULT 0,
+    sku VARCHAR(50) UNIQUE,
+
+    image_url VARCHAR(500),
+
+    active BOOLEAN DEFAULT TRUE,
+
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+
+    updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
+);

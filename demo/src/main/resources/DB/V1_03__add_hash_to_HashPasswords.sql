@@ -1,0 +1,2 @@
+ALTER TABLE HashPasswords
+  ADD COLUMN hash VARCHAR(512) NOT NULL;
